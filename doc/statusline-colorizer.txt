@@ -1,0 +1,13 @@
+*statusline-colorizer.txt* Change the statusline color based on mode.
+
+Author: Bradford Smith https://github.com/bradford-smith94
+
+==============================================================================
+INTRODUCTION                                            *statusline-colorizer*
+
+This plugin will allow you to change the color of the builtin statusline based
+on what mode you are in.
+
+==============================================================================
+
+ vim:tw=78:ft=help:norl:
