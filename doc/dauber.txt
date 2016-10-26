@@ -1,9 +1,11 @@
-*statusline-colorizer.txt* Change the statusline color based on mode.
+*dauber.txt* Change the statusline color based on mode.
 
 Author: Bradford Smith https://github.com/bradford-smith94
 
 ==============================================================================
-INTRODUCTION                                            *statusline-colorizer*
+INTRODUCTION                                                          *dauber*
+
+Dauber - noun - a crude or inartistic painter.
 
 This plugin will allow you to change the color of the builtin statusline based
 on what mode you are in.
