@@ -5,12 +5,37 @@ if exists('g:loaded_dauber') || &cp
 endif
 let g:loaded_dauber = 1
 
+if !exists('g:dauber_normal_groups')
+    let g:dauber_normal_groups = []
+endif
+
+if !exists('g:dauber_insert_groups')
+    let g:dauber_insert_groups = []
+endif
+
+if !exists('g:dauber_replace_groups')
+    let g:dauber_replace_groups = []
+endif
+
+if !exists('g:dauber_visual_groups')
+    let g:dauber_visual_groups = []
+endif
+
+if !exists('g:dauber_visual_block_groups')
+    let g:dauber_visual_block_groups = []
+endif
+
+if !exists('g:dauber_visual_line_groups')
+    let g:dauber_visual_line_groups = []
+endif
+
 "much of this taken from: http://stackoverflow.com/a/9121083
 augroup dauber
     autocmd!
     autocmd InsertEnter * call dauber#colorStatusline('i' . v:insertmode)
     autocmd InsertLeave * call dauber#colorStatusline('n')
-    autocmd CursorHold * call dauber#colorStatusline(mode())
+    autocmd WinEnter,BufWinEnter,ColorScheme * call dauber#colorStatusline(mode())
+    autocmd CursorMoved * call dauber#colorStatuslineOnce()
 augroup END
 
 "work around for not having VisualEnter/VisualLeave autocmds
