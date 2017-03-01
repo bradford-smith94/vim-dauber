@@ -3,25 +3,25 @@
 function! dauber#colorStatusline(mode) "{{{
     if a:mode == 'ii' || a:mode == 'i'
         "normal insert
-        dauber#highlightInsert()
+        call dauber#highlightInsert()
     elseif a:mode == 'ir' || a:mode == 'R'
         "insert replace mode
-        dauber#highlightReplace()
+        call dauber#highlightReplace()
     elseif a:mode == 'iv' || a:mode == 'Rv'
         "virtual insert mode
-        dauber#highlightInsert()
+        call dauber#highlightInsert()
     elseif a:mode == 'n'
         "normal mode
         call dauber#highlightNormal()
     elseif a:mode == 'v' || a:mode == 's'
         "visual mode
-        dauber#highlightVisual()
+        call dauber#highlightVisual()
     elseif a:mode == 'V' || a:mode == 'S'
         "visual line mode
-        dauber#highlightVLine()
+        call dauber#highlightVLine()
     elseif a:mode == 'CTRL-V' || a:mode == 'CTRL-S'
         "visual block mode
-        dauber#highlightVBlock()
+        call dauber#highlightVBlock()
     else
         "use normal colors
         call dauber#highlightNormal()
