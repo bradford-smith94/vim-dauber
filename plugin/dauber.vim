@@ -40,9 +40,8 @@ augroup END
 
 "work around for not having VisualEnter/VisualLeave autocmds
 "see: https://stackoverflow.com/a/15565233
-"TODO: don't need these?
-"nnoremap <silent> v :call dauber#colorStatusline('v')<CR>v
-"nnoremap <silent> V :call dauber#colorStatusline('V')<CR>V
-"nnoremap <silent> <C-v> :call dauber#colorStatusline('CTRL-V')<CR><C-v>
-"vnoremap <silent> <Esc> <Esc>:call dauber#colorStatusline('n')<CR>
+nnoremap <silent> v :call dauber#colorStatusline('v')<CR>v
+nnoremap <silent> V :call dauber#colorStatusline('V')<CR>V
+nnoremap <silent> <C-v> :call dauber#colorStatusline('CTRL-V')<CR><C-v>
+vnoremap <silent> <Esc> <Esc>:call dauber#colorStatusline('n')<CR>
 
