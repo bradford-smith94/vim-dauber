@@ -5,11 +5,40 @@ Author: Bradford Smith https://github.com/bradford-smith94
 ==============================================================================
 INTRODUCTION                                                          *dauber*
 
-Dauber - noun - a crude or inartistic painter.
+Dauber - _noun_ - a crude or inartistic painter.
 
 This plugin will allow you to change the color of the builtin statusline based
 on what mode you are in.
 
 ==============================================================================
+CONTENTS                                                     *dauber-contents*
+
+Introduction..........................................................|dauber|
+Contents.....................................................|dauber-contents|
+How it works.............................................|dauber-how-it-works|
+Configuration..................................................|dauber-config|
+
+==============================================================================
+HOW IT WORKS                                             *dauber-how-it-works*
+
+Dauber makes use of Vim's User highlight groups (|hl-User1..9|). Use these
+groups in your |statusline| config, then define highlight groups for each Vim
+mode, and Dauber will link them to User1 - User9 when the mode switches.
+
+==============================================================================
+CONFIGURATION                                                  *dauber-config*
+
+The following variables are used to control Dauber:
+>
+  g:dauber_normal_groups
+  g:dauber_insert_groups
+  g:dauber_replace_groups
+  g:dauber_visual_groups
+  g:dauber_visual_block_groups
+  g:dauber_visual_line_groups
+<
+
+Each of them should be set to a list of the names of nine highlight groups.
+If you don't want a color set it to the name `NONE` or something like that.
 
  vim:tw=78:ft=help:norl:
